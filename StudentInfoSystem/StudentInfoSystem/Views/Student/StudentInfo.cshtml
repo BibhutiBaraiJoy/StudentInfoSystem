@@ -1,0 +1,72 @@
+﻿@model IEnumerable<StudentInfoSystem.Models.Student>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+    <table class=" table-bordered col-sm-12">
+        <tr class="col-sm-12 row">
+            <th bgcolor="lightblue" class="col-sm-2">@Html.DisplayNameFor(moel => moel.Name)</th>
+            <th bgcolor="lightblue" class="col-sm-2">@Html.DisplayNameFor(model => model.Roll)</th>
+            <th bgcolor="lightblue" class="col-sm-2">@Html.DisplayNameFor(model => model.Department.DepartmentName)</th>
+            <th bgcolor="lightblue" class="col-sm-2">@Html.DisplayNameFor(model => model.Email)</th>
+            <th bgcolor="lightblue" class="col-sm-2">@Html.DisplayNameFor(model => model.PhoneNo)</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr class="col-sm-12 row">
+                <td class="col-sm-2">@Html.DisplayFor(modelItem => item.Name)</td>
+                <td class="col-sm-2">@Html.DisplayFor(modelItem => item.Roll)</td>
+                <td class="col-sm-2">@Html.DisplayFor(modelItem => item.Department.DepartmentName)</td>
+                <td class="col-sm-2">@Html.DisplayFor(modelItem => item.Email)</td>
+                <td class="col-sm-2">@Html.DisplayFor(modelItem => item.PhoneNo)</td>
+            </tr>
+
+
+        }
+    </table>
+    @*<div class="table-bordered col-sm-12">
+            <div class="col-sm-12 row">
+                <div class="col-sm-2" style="float: left;">
+                    @Html.DisplayNameFor(moel => moel.Name)
+                </div>
+                <div class="col-sm-2 left" style="float: left;">
+                    @Html.DisplayNameFor(model => model.Roll)
+                </div>
+                <div class="col-sm-2" style="float: left;">
+                    @Html.DisplayNameFor(model => model.Department.DepartmentName)
+                </div>
+                <div class="col-sm-2" style="float: left;">
+                    @Html.DisplayNameFor(model => model.Email)
+                </div>
+                <div class="col-sm-2" style="float: left;">
+                    @Html.DisplayNameFor(model => model.PhoneNo)
+                </div>
+            </div>
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-10 row">
+                    <div class="col-sm-2">
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.DisplayFor(modelItem => item.Roll)
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.DisplayFor(modelItem => item.Department.DepartmentName)
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </div>
+                    <div class="col-sm-2">
+                        @Html.DisplayFor(modelItem => item.PhoneNo)
+                    </div>
+                </div>
+            }
+        </div>*@
+</body>
+</html>

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<StudentInfoSystem.Models.Student>
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    </head>
+<body>
+
+    <table border="1" width="100%" bordercolor="RED">
+        <tr><td colspan="5" bgcolor="LightGreen" align="center" valign="top">Student List</td></tr>
+        <tr>
+            <th colspan="1"> Name</th>
+            <th colspan="1">Roll</th>
+            <th colspan="1">Department</th>
+            <th colspan="1">Email</th>
+            <th colspan="1">PhoneNo</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Roll</td>
+                <td>@item.Department.DepartmentName</td>
+                <td>@item.Email</td>
+                <td>@item.PhoneNo</td>
+            </tr>
+        }
+    </table>
+    <div class="form-group">
+        <button onclick="location.href='@Url.Action("PDF", "Student")';return false;">Create PDF </button>
+    </div>
+   
+</body>
+
+</html>
